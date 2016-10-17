@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'link', 'jade' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.4
+4 verbose link symlinking /usr/local/lib/node_modules/jade to /Users/ninja/Desktop/robotnao/node_modules/jade
+5 silly gentlyRm /Users/ninja/Desktop/robotnao/node_modules/jade is being purged
+6 verbose gentlyRm don't care about contents; nuking /Users/ninja/Desktop/robotnao/node_modules/jade
+7 info build /Users/ninja/Desktop/robotnao/node_modules/jade
+8 info linkStuff jade@1.11.0
+9 silly linkStuff jade@1.11.0 has /Users/ninja/Desktop/robotnao/node_modules as its parent node_modules
+10 verbose linkBins jade@1.11.0
+11 verbose link bins [ { jade: './bin/jade.js' },
+11 verbose link bins   '/Users/ninja/Desktop/robotnao/node_modules/.bin',
+11 verbose link bins   false ]
+12 verbose linkMans jade@1.11.0
+13 silly gentlyRm /Users/ninja/Desktop/robotnao/node_modules/.bin/jade is being purged
+14 verbose gentlyRm don't care about contents; nuking /Users/ninja/Desktop/robotnao/node_modules/.bin/jade
+15 verbose stack Error: EPERM: operation not permitted, chmod '/Users/ninja/Desktop/robotnao/node_modules/jade/bin/jade.js'
+15 verbose stack     at Error (native)
+16 verbose cwd /Users/ninja/Desktop/robotnao
+17 error Darwin 15.0.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "link" "jade"
+19 error node v4.2.4
+20 error npm  v2.14.12
+21 error path /Users/ninja/Desktop/robotnao/node_modules/jade/bin/jade.js
+22 error code EPERM
+23 error errno -1
+24 error syscall chmod
+25 error Error: EPERM: operation not permitted, chmod '/Users/ninja/Desktop/robotnao/node_modules/jade/bin/jade.js'
+25 error     at Error (native)
+25 error  { [Error: EPERM: operation not permitted, chmod '/Users/ninja/Desktop/robotnao/node_modules/jade/bin/jade.js']
+25 error   errno: -1,
+25 error   code: 'EPERM',
+25 error   syscall: 'chmod',
+25 error   path: '/Users/ninja/Desktop/robotnao/node_modules/jade/bin/jade.js' }
+26 error Please try running this command again as root/Administrator.
+27 verbose exit [ -1, true ]
