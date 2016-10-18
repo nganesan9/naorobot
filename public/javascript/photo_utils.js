@@ -150,7 +150,7 @@ PhotoUtils.App = function() {
     }
     function getPokerClassesFound1(classifyResults) {
       var classes = null
-      if (classifyResults.images.length > 0 && classifyResults.images[0].classifiers.length > 1
+      if (classifyResults.images.length > 0 && classifyResults.images[0].classifiers.length > 0
         && classifyResults.images[0].classifiers[0].classes.length > 0) {
           classes = classifyResults.images[0].classifiers[0].classes
         }
@@ -179,6 +179,7 @@ PhotoUtils.App = function() {
               results.push(result)
             }
           }
+          console.log("Added first class");
           var classes2 = getPokerClassesFound2(classifyResults)
           if (classes2) {
             for (var i in classes2) {
@@ -188,6 +189,7 @@ PhotoUtils.App = function() {
               results.push(result)
             }
           }
+          console.log("Added second class");
           showAnalysisResults(pokerResults,results)
         }
 

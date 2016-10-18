@@ -1,24 +1,204 @@
-<div class="heading, team_div">Team</div>
-<table>
-  <tbody>
-  <tr>
-    <td><img src="images/team/neeraja.jpg" alt="Neeraja Ganesan" class="team_icon"/></td>
-    <td><img src="/images/team/ron.png" alt="Ron Poznansky" class="team_icon"/></td>
-    <td><img src="images/team/anthony.png" alt="Anthony P Stevens" class="team_icon"/></td>
-    <td><img src="images/team/alyssa.jpg" alt="Alyssa Simpson" class="team_icon"/></td>
-    <td><img src="images/team/rob.png" alt="Rob Murgai" class="team_icon"/></td>
-    <td><img src="images/team/stephan.png" alt="Stephan J Roorda" class="team_icon"/></td>
-    <td><img src="images/team/ryan.png" alt="Ryan R Anderson" class="team_icon"/></td>
-  </tr>
-  <tr>
-    <td class="team_name">Neeraja Ganesan</td>
-    <td class="team_name">Ron Poznansky</td>
-    <td class="team_name">Anthony Stevens</td>
-    <td class="team_name">Alyssa Simpson</td>
-    <td class="team_name">Rob Murgai</td>
-    <td class="team_name">Stephan Roorda</td>
-    <td class="team_name">Ryan Anderson</td>
-  </tr>
-  </tbody>
-</table>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link href="stylesheets/settings.css" type="text/css" rel="stylesheet">
+  <link href="stylesheets/ladda/ladda-themeless.min.css" type="text/css" rel="stylesheet">
+  <title>Settings</title>
+  <script src="javascript/jquery/jquery-2.1.0.min.js" type="text/javascript"> </script>
+  <script src="javascript/robot_nao_settings.js" type="text/javascript"> </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body class="bodyBackground" text="white" style="background-color:#2B3E50;">
+  <div id="top_locked_div"><img id="back_button" src="../images/back_icon.png">
+    <div id="heading">Settings</div>
+    <div class="clearBoth"></div>
+  </div>
+  <div class="container" id="main_wrapper" style="width: auto;">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id="settings">
+      <h3 style="color:white">IP Address:</h3><br>
+      <input id="ip_0" type="text" style="box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 90px rgba(255, 0, 0, 0.6); width: 50px; display:inline-block !important" class="form-control ip_address"><span class="ip_address_period">.</span>
+      <input id="ip_1" type="text" style="box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 90px rgba(255, 0, 0, 0.6); width: 50px; display:inline-block !important" class="ip_address form-control" style="display:inline-block !important"><span class="ip_address_period">.</span>
+      <input id="ip_2" type="text" style="box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 90px rgba(255, 0, 0, 0.6); width: 50px; display:inline-block !important" class="ip_address form-control" style="display:inline-block !important"><span class="ip_address_period">.</span>
+      <input id="ip_3" type="text" style="box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 90px rgba(255, 0, 0, 0.6); width: 50px; display:inline-block !important" class="ip_address form-control" style="display:inline-block !important"><br><br>
+      <button id="megatron_stats_button" class="btn btn-primary" style="margin-bottom: 1%">Megatron Statistics</button>
+      <br>
+      <div class="row alert alert-warning" style="display: inline-block; color:black">
+        <p>Go here to view battery power and to change voice volume</p>
+      </div>
+      <!-- <div id="usage_tips"><span>Go here to view battery power and to change voice volume</span></div> -->
+      <div style="color:white">
+        <h3> Battery Saving Options:</h3>
+        <div class="checkbox">
+          <label><input id="setAliveCb" type="checkbox">Is Megatron Alive</label>
+          <br>
+          <label><input id="setBreathingCb" type="checkbox">Is Megatron Breathing</label>
+        </div>
+      </div>
+      <button id="submit_button" class="btn btn-success" style="margin-bottom: 1%; color: black">Send Update To Megatron</button>
+    </div>
+    <!-- <div id="communication_error" class="hidden">The Megatron server interface is not responding</div> -->
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id="communication_error">
+      <div class="row alert alert-danger text-center" style="margin-left: 1.5%">
+        <strong>Megatron server interface is not responding</strong>
+      </div>
+    </div>
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" style="color:white">
+      <p><h3>Team</h3> </p>
+      <div class="container">
+        <div class="row seven-cols">
+          <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
+            <div class="staff-photo">
+              <p> <img src="images/team/neeraja.jpg" alt="Neeraja Ganesan" class="team_icon"/> </p>
+            </div>
+
+            <div class="staff-name">
+              <div class="staff-first-name">
+                Neeraja
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
+            <div class="staff-photo">
+              <p> <img src="images/team/ron.png" alt="Ron Poznansky" class="team_icon"/> </p>
+            </div>
+
+            <div class="staff-name">
+              <div class="staff-first-name">
+                Ron Poznansky
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
+            <div class="staff-photo">
+              <p> <img src="images/team/anthony.png" alt="Anthony Stevens" class="team_icon"/> </p>
+            </div>
+
+            <div class="staff-name">
+              <div class="staff-first-name">
+                Anthony Stevens
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
+            <div class="staff-photo">
+              <p> <img src="images/team/alyssa.jpg" alt="Alyssa Simpson" class="team_icon"/> </p>
+            </div>
+
+            <div class="staff-name">
+              <div class="staff-first-name">
+                Alyssa Simpson
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
+            <div class="staff-photo">
+              <p> <img src="images/team/rob.png" alt="Rob Murgai" class="team_icon"/> </p>
+            </div>
+
+            <div class="staff-name">
+              <div class="staff-first-name">
+                Rob Murgai
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
+            <div class="staff-photo">
+              <p> <img src="images/team/stephan.png" alt="Stephan Roorda" class="team_icon"/> </p>
+            </div>
+
+            <div class="staff-name">
+              <div class="staff-first-name">
+                Stephan Roorda
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6">
+            <div class="staff-photo">
+              <p> <img src="images/team/ryan.png" alt="Ryan Anderson" class="team_icon"/> </p>
+            </div>
+
+            <div class="staff-name">
+              <div class="staff-first-name">
+                Ryan Anderson
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+      <div class="container">
+      <div class="col-lg-0.75">
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-1.5">
+    <p> <img src="images/team/neeraja.jpg" alt="Neeraja Ganesan" class="team_icon"/> </p>
+    <p> Neeraja Ganesan </p>
+  </div>
+
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-1.5">
+  <p> <img src="images/team/ron.png" alt="Ron Poznansky" class="team_icon"/> </p>
+  <p> Ron Poznansky </p>
 </div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-1.5">
+<p> <img src="images/team/anthony.png" alt="Anthony Stevens" class="team_icon"/> </p>
+<p> Anthony Stevens </p>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-1.5">
+<p> <img src="images/team/alyssa.jpg" alt="Alyssa Simpson" class="team_icon"/> </p>
+<p> Alyssa Simpson </p>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-1.5">
+<p> <img src="images/team/rob.png" alt="Rob Murgai" class="team_icon"/> </p>
+<p> Rob Murgai </p>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-1.5">
+<p> <img src="images/team/stephan.png" alt="Stephan Roorda" class="team_icon"/> </p>
+<p> Stephan Roorda </p>
+</div>
+
+<div class="col-xs-6 col-sm-12 col-md-3 col-lg-1.5">
+<p> <img src="images/team/ryan.png" alt="Ryan Anderson" class="team_icon"/> </p>
+<p> Ryan Anderson </p>
+</div>
+
+<div class="col-xs-6 col-sm-2 col-md-3 col-lg-0.75">
+</div>
+</div>
+-->
+<!--
+<table class="table">
+<tbody>
+<tr>
+<td><img src="images/team/neeraja.jpg" alt="Neeraja Ganesan" class="team_icon"></td>
+<td><img src="images/team/ron.png" alt="Ron Poznansky" class="team_icon"></td>
+<td><img src="images/team/anthony.png" alt="Anthony P Stevens" class="team_icon"></td>
+<td><img src="images/team/alyssa.jpg" alt="Alyssa Simpson" class="team_icon"></td>
+<td><img src="images/team/rob.png" alt="Rob Murgai" class="team_icon"></td>
+<td><img src="images/team/stephan.png" alt="Stephan J Roorda" class="team_icon"></td>
+<td><img src="images/team/ryan.png" alt="Ryan R Anderson" class="team_icon"></td>
+</tr>
+<tr>
+<td class="team_name">Neeraja Ganesan</td>
+<td class="team_name">Ron Poznansky</td>
+<td class="team_name">Anthony Stevens</td>
+<td class="team_name">Alyssa Simpson</td>
+<td class="team_name">Rob Murgai</td>
+<td class="team_name">Stephan Roorda</td>
+<td class="team_name">Ryan Anderson</td>
+</tr>
+</tbody>
+</table>
+-->
+</div>
+</div>
+</body>

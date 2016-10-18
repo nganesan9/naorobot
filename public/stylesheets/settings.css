@@ -61,8 +61,10 @@ button {
     font-size: 14px;
 }
 #megatron_stats_button {
+  /*
     background-color: lightsteelblue;
     margin-left: 20px;
+  */
 }
 #usage_tips {
     color: #0074D9;
@@ -70,8 +72,10 @@ button {
     margin-bottom: 15px;
 }
 #submit_button {
+  /*
     background-color: #f9cd0b;
     margin-top: 20px;
+  */
 }
 .ip_address_period {
     margin-top: 10px;
@@ -79,12 +83,16 @@ button {
     margin-right: 5px;
 }
 #setAliveCb {
+  /*
     margin-right: 10px;
     margin-top: 10px;
+ */
 }
 #setBreathingCb {
+  /*
     margin-right: 10px;
     margin-top: 5px;
+  */
 }
 .team_div {
     margin-top: 150px;
@@ -116,4 +124,17 @@ a:link, a:visited {
 }
 .clearBoth {
     clear:both;
+}
+@media (min-width: 1200px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+}
+/* 14% = 100% (full-width row) divided by 7 */
+
+img{
+  max-width: 100%;
 }
