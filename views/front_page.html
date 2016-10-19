@@ -1,0 +1,46 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="stylesheets/robot_nao.css" type="text/css" rel="stylesheet">
+    <link href="stylesheets/ladda/ladda-themeless.min.css" type="text/css" rel="stylesheet">
+    <title>Watson Visual Recognition</title>
+    <script src="javascript/jquery/jquery-2.1.0.min.js" type="text/javascript"><!-- jQuery-- ></script>
+    <script src="javascript/photo_utils.js" type="text/javascript"><!-- Watson Team JS-- ></script>
+</head>
+  <body class="body_background">
+    <div id="top_locked_div">
+      <div id="heading">Watson sees...</div><img id="settings_image" src="../images/settings.png">
+      <div class="clearBoth"></div>
+    </div>
+    <div id="main_wrapper">
+        <div class="no_photo">No Photo Available</div>
+    </div>
+    <button id="requestPhotoButton">
+      <div id="request_photo_button_enabled">Request a photo</div>
+      <div id="request_photo_button_loading" class="hidden"></div>
+    </button><!-- Reusable template for adding new photo analysis -->
+    <div id="analysis_template" class="analysis_wrapper hidden">
+      <div class="photo_wrapper"><img class="photo"></div>
+      <div class="vr_analysis">
+        <div class="face_results">Faces</div>
+        <div class="poker_heading">Poker
+          <div class="poker_results"></div>
+        </div>
+        <div class="classifier_heading">Classifier
+          <div class="classifier_results"></div>
+        </div>
+      </div>
+      <div class="similar_images_heading">Similar Products
+        <div class="similar_images"></div>
+      </div>
+    </div><!-- Reusable template for displaying classifier results -->
+    <div id="analysis_result" class="analysis_result hidden">
+      <div id="analysis_result_description" class="analysis_result_description"></div>
+      <div id="analysis_result_confidence" class="analysis_result_confidence"></div>
+      <div class="clearBoth"></div>
+    </div><!-- Reusable template for displaying similar image results -->
+    <div id="similar_image_result" class="similar_image_result hidden"><img id="similar_image_result_image" class="similar_image_result_image">
+      <div id="similar_image_result_confidence" class="similar_image_result_confidence"></div>
+      <div class="clearBoth"></div>
+    </div>
+  </body>

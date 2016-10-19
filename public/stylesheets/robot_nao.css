@@ -15,14 +15,14 @@ body div {
     box-sizing: border-box;
 }
 .body_background{
-    background-color: #323232;
+    background-color: #152935;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 #top_locked_div {
-    background-color: #000;
+    background-color: #2D3F49;
     position:fixed;
     top:0;
     width:100%;
@@ -141,7 +141,7 @@ body div {
     margin-top: 10px;
 }
 #requestPhotoButton {
-    background-color: #311941;
+    background-color: #dff0d8;
     font-size: 20px;
     border-width: 0px;
     position:fixed;
@@ -152,7 +152,7 @@ body div {
     height: 60px;
 }
 #request_photo_button_enabled {
-    color: #fff;
+    color: #3c763d;
 }
 /***  Common CSS ***/
 button:focus {
@@ -181,7 +181,7 @@ a:link, a:visited {
     border-top: 1.1em solid rgba(255, 255, 255, 0.2);
     border-right: 1.1em solid rgba(255, 255, 255, 0.2);
     border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-    border-left: 1.1em solid #ffffff;
+    border-left: 1.1em solid #3c763d;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);

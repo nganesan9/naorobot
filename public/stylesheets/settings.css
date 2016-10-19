@@ -22,7 +22,7 @@ body div {
     background-size: cover;
 }
 #top_locked_div {
-    background-color: #000;
+    background-color: #152935;
     position:fixed;
     top:0;
     width:100%;
@@ -81,6 +81,7 @@ button {
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
+    color: white;
 }
 #setAliveCb {
   /*

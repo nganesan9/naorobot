@@ -11,12 +11,14 @@ html
             div#heading Watson sees...
             img#settings_image(src="../images/settings.png")
             div.clearBoth
-        div#main_wrapper
-            div.no_photo No Photo Available
+        #main_wrapper
+            .no_photo.text-center(style='border: 1px solid #efbbb9;background-color: #efbbb9;text-align: center;color: red; padding-top: 5px; padding-bottom: 5px;')
+              h3 No Photo Available
 
         button#requestPhotoButton
-            div#request_photo_button_enabled Request a photo
-            div#request_photo_button_loading.hidden
+            #request_photo_button_enabled.alert.alert-success
+             strong Request a photo
+            #request_photo_button_loading.hidden
 
         <!-- Reusable template for adding new photo analysis -->
         div#analysis_template.analysis_wrapper.hidden
