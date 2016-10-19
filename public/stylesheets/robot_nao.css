@@ -69,6 +69,8 @@ body div {
     position: absolute;
     border: 2px solid red;
     z-index: 100;
+    display: inline-block;
+    margin:0 auto;
 }
 .face_results {
     margin-bottom: 5px;
@@ -165,6 +167,10 @@ a:link, a:visited {
 .hidden {
     display: none;
 }
+.spinner_hidden{
+  display: none;
+}
+
 .visible {
     display: block;
 }

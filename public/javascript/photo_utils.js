@@ -107,12 +107,16 @@ PhotoUtils.App = function() {
     .load(function() {
       // Now we have real and displayed width
       var imageReduction = $(imgId).width() / this.width
+      console.log("Distance of image from screen left = " + $(imgId).position().left);
+      //adding this to face_region's 'left'. When the page is refreshed, the region is re positioned accordingly
+      //Page refresh is essential for re positioning
+      var left_from_screen = $(imgId).position().left;
 
       for (var i in faces) {
         var face = faces[i]
         if (face.face_location) {
           faceRegion = $('<div />', {"class": 'face_region'})
-          faceRegion.css('left', (face.face_location.left*imageReduction) + "px");
+          faceRegion.css('left', ((face.face_location.left*imageReduction) + left_from_screen) + "px");
           faceRegion.css('top', (face.face_location.top*imageReduction) + "px");
           faceRegion.css('height', (face.face_location.height*imageReduction) + "px");
           faceRegion.css('width', (face.face_location.width*imageReduction) + "px");
@@ -222,7 +226,7 @@ PhotoUtils.App = function() {
 
           function showSimilarImageResults(parent,results) {
 
-            var div = $('<div>')
+            var div = $('<div style=\"display: table;margin: 0 auto;\">')
             parent.append(div);
 
             var counter = 0
@@ -249,7 +253,7 @@ PhotoUtils.App = function() {
 
           function showAnalysisResults(parent,results) {
 
-            var div = $('<div>')
+            var div = $('<div style=\"display: table;margin: 0 auto;\">')
             parent.append(div);
 
             var counter = 0
@@ -261,7 +265,10 @@ PhotoUtils.App = function() {
 
               var description_div = template.find('#analysis_result_description')
               description_div.attr("id", "analysis_result_description_" + analysis_result_counter)
-              description_div.html(results[i].description)
+              var desc = results[i].description;
+              desc = desc.charAt(0).toUpperCase() + desc.slice(1);
+              console.log("Desc is : " + desc);
+              description_div.html(desc)
               var confidence_div = template.find('#analysis_result_confidence')
               confidence_div.attr("id", "analysis_result_confidence_" + analysis_result_counter)
               confidence_div.html(results[i].confidence)
@@ -317,7 +324,7 @@ PhotoUtils.App = function() {
             refreshPhotos()
             window.setInterval(function(){
               refreshPhotos()
-            }, 20000);
+            }, 60000);
 
           };
 

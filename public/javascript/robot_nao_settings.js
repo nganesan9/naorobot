@@ -65,10 +65,12 @@ RobotNaoSettings.App = function() {
                 window.location = link
             }
         });
-
+        //onClick event for the same has been written in footer_file.html
+        /*
         $("#back_button").click(function(){
             window.location = location.href + "/.."
         });
+        */
 
         refreshSettings()
     };

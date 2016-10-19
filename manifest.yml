@@ -1,15 +1,7 @@
-declared-services:
-  ipa-cloudant_service:
-    label: cloudantNoSQLDB
-    plan: Shared
-
 applications:
-- services:
-  - ipa-cloudant_service
-  name: aps-robot-nao
+- name: naobotvisrec
   command: node app.js
   path: .
   instances: 1
   memory: 512M
-
-
+  host: naobotvisrec
